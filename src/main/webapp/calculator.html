@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function goTo(url) {
+		document.getElementById('calculator_form').action = url;
+	}
+</script>
+
+</head>
+<body>
+	<form id="calculator_form" action="" method="get">
+		<table>
+			<tr>
+				<td>Number 1</td>
+				<td><input type="text" name="n1" /></td>
+			</tr>
+
+			<tr>
+				<td>Number 2</td>
+				<td><input type="text" name="n2" /></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" value="Add" onclick="goTo('/calculoter/add')"/>
+					<input type="submit" value="Subtract" onclick="goTo('/calculoter/subtract')"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
