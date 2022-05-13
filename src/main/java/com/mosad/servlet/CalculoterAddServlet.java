@@ -15,13 +15,11 @@ public class CalculoterAddServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			String n1 = request.getParameter("n1");
-			String n2 = request.getParameter("n2");
-			int number1 = Integer.parseInt(n1);
-			int number2 = Integer.parseInt(n2);
-			response.getWriter().println(number1 + number2);
+			int n1 = Integer.parseInt(request.getParameter("n1"));
+			int n2 = Integer.parseInt(request.getParameter("n2"));
+			response.getWriter().println("<h1 style='color: green'>" + (n1 + n2) + "</h1>");
 		} catch (Exception e) {
-			response.getWriter().println("please pass valid values");
+			response.getWriter().println("<h1 style='color: red'>Please pass valid values</h1>");
 		}
 	}
 
